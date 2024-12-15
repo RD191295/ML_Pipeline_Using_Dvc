@@ -63,7 +63,7 @@ def save_data(train_data:pd.DataFrame, test_data:pd.DataFrame, data_path:str)-> 
 
     """
     try :
-        data_path = os.path.join(data_path,'rw')
+        data_path = os.path.join(data_path,'raw')
         os.makedirs(data_path, exist_ok= True)
         train_data.to_csv(os.path.join(data_path,"train.csv"),index=False)
         test_data.to_csv(os.path.join(data_path,"test.csv"),index=False)
